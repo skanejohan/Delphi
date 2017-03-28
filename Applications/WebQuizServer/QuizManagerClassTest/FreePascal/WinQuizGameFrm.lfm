@@ -1,0 +1,129 @@
+object WinQuizGameForm: TWinQuizGameForm
+  Left = 352
+  Height = 359
+  Top = 215
+  Width = 400
+  Caption = 'WinQuizGameForm'
+  ClientHeight = 359
+  ClientWidth = 400
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '0.9.28.2'
+  object QuizesListBox: TListBox
+    Left = 8
+    Height = 80
+    Top = 64
+    Width = 272
+    ItemHeight = 0
+    TabOrder = 0
+  end
+  object StartQuizButton: TButton
+    Left = 287
+    Height = 25
+    Top = 7
+    Width = 107
+    Caption = 'Start Quiz'
+    OnClick = StartQuizButtonClick
+    TabOrder = 1
+  end
+  object QuizPanel: TPanel
+    Left = 8
+    Height = 194
+    Top = 160
+    Width = 386
+    Anchors = [akTop, akLeft, akRight]
+    ClientHeight = 194
+    ClientWidth = 386
+    TabOrder = 2
+    Visible = False
+    object QuestionNumberLabel: TLabel
+      Left = 16
+      Height = 16
+      Top = 8
+      Width = 121
+      Caption = 'QuestionNumberLabel'
+      ParentColor = False
+    end
+    object QuestionLabel: TLabel
+      Left = 16
+      Height = 16
+      Top = 32
+      Width = 77
+      Caption = 'QuestionLabel'
+      ParentColor = False
+    end
+    object Alt1Button: TButton
+      Tag = 1
+      Left = 16
+      Height = 25
+      Top = 56
+      Width = 363
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'Alt1Button'
+      OnClick = AltButtonClick
+      TabOrder = 0
+    end
+    object Alt2Button: TButton
+      Tag = 2
+      Left = 16
+      Height = 25
+      Top = 88
+      Width = 363
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'Alt2Button'
+      OnClick = AltButtonClick
+      TabOrder = 1
+    end
+    object Alt3Button: TButton
+      Tag = 3
+      Left = 16
+      Height = 25
+      Top = 120
+      Width = 363
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'Alt3Button'
+      OnClick = AltButtonClick
+      TabOrder = 2
+    end
+    object Alt4Button: TButton
+      Tag = 4
+      Left = 16
+      Height = 25
+      Top = 152
+      Width = 363
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'Alt4Button'
+      OnClick = AltButtonClick
+      TabOrder = 3
+    end
+  end
+  object ResultPanel: TPanel
+    Left = 8
+    Height = 194
+    Top = 160
+    Width = 386
+    TabOrder = 3
+    Visible = False
+  end
+  object HardcodedRadioButton: TRadioButton
+    Left = 8
+    Height = 19
+    Top = 8
+    Width = 179
+    Caption = 'Use hard-coded quiz manager'
+    Checked = True
+    OnClick = RadioButtonChange
+    State = cbChecked
+    TabOrder = 4
+  end
+  object IniFileRadioButton: TRadioButton
+    Left = 8
+    Height = 19
+    Top = 36
+    Width = 149
+    Caption = 'Use ini file quiz manager'
+    OnClick = RadioButtonChange
+    TabOrder = 5
+    TabStop = False
+  end
+end

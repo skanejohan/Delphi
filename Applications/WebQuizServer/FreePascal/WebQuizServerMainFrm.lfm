@@ -1,0 +1,19 @@
+object WebQuizServerMainForm: TWebQuizServerMainForm
+  Left = 175
+  Height = 82
+  Top = 62
+  Width = 220
+  Caption = 'WebQuizServerMainForm'
+  ClientHeight = 82
+  ClientWidth = 220
+  OnCreate = FormCreate
+  LCLVersion = '0.9.28.2'
+  object LogMemo: TMemo
+    Left = 0
+    Height = 82
+    Top = 0
+    Width = 220
+    Align = alClient
+    TabOrder = 0
+  end
+end

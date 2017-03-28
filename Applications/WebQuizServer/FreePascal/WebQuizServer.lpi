@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <PathDelim Value="\"/>
+    <Version Value="7"/>
+    <General>
+      <MainUnit Value="0"/>
+      <TargetFileExt Value=".exe"/>
+      <Icon Value="0"/>
+      <UseXPManifest Value="True"/>
+      <ActiveEditorIndexAtStart Value="0"/>
+    </General>
+    <VersionInfo>
+      <ProjectVersion Value=""/>
+      <Language Value=""/>
+      <CharSet Value=""/>
+    </VersionInfo>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="2">
+      <Item1>
+        <PackageName Value="lnetvisual"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+    </RequiredPackages>
+    <Units Count="12">
+      <Unit0>
+        <Filename Value="WebQuizServer.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="WebQuizServer"/>
+        <CursorPos X="35" Y="1"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="410"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="WebQuizServerMainFrm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="WebQuizServerMainForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="WebQuizServerMainFrm"/>
+        <CursorPos X="1" Y="12"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="0"/>
+        <UsageCount Value="410"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\WebQuizServerManagerClass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="WebQuizServerManagerClass"/>
+        <CursorPos X="1" Y="6"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="410"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\..\..\Include\SocketServerClass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SocketServerClass"/>
+        <CursorPos X="22" Y="120"/>
+        <TopLine Value="111"/>
+        <UsageCount Value="410"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\..\..\Include\QuizGameClass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="QuizGameClass"/>
+        <CursorPos X="6" Y="1"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="410"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\..\..\Include\QuizManagerClass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="QuizManagerClass"/>
+        <CursorPos X="1" Y="99"/>
+        <TopLine Value="93"/>
+        <UsageCount Value="410"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\..\..\Include\SessionClasses.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SessionClasses"/>
+        <CursorPos X="37" Y="274"/>
+        <TopLine Value="271"/>
+        <UsageCount Value="410"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\webquizsessionclass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="WebQuizSessionClass"/>
+        <CursorPos X="1" Y="24"/>
+        <TopLine Value="17"/>
+        <UsageCount Value="400"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\PreloadedIniFileQuizManagerClass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PreloadedIniFileQuizManagerClass"/>
+        <CursorPos X="48" Y="1"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="398"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\..\..\..\..\..\lazarus\lcl\graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <CursorPos X="3" Y="425"/>
+        <TopLine Value="414"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\..\..\..\..\..\..\lazarus\fpc\2.2.4\source\packages\fcl-image\src\fpwritepng.pp"/>
+        <UnitName Value="FPWritePNG"/>
+        <CursorPos X="1" Y="1"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="10"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\..\..\..\..\..\..\lazarus\lcl\extctrls.pp"/>
+        <UnitName Value="ExtCtrls"/>
+        <CursorPos X="17" Y="593"/>
+        <TopLine Value="579"/>
+        <UsageCount Value="10"/>
+      </Unit11>
+    </Units>
+    <JumpHistory Count="0" HistoryIndex="-1"/>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="8"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)\"/>
+      <OtherUnitFiles Value="C:\Users\Windows7VM\Documents\Development\Applications\WebQuizServer\;C:\Users\Windows7VM\Documents\Development\Include\"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

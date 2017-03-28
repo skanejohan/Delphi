@@ -1,0 +1,89 @@
+object SingletonTestForm1: TSingletonTestForm1
+  Left = 567
+  Height = 149
+  Top = 249
+  Width = 538
+  Caption = 'SingletonTestForm1'
+  ClientHeight = 149
+  ClientWidth = 538
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '0.9.28.2'
+  object SingletonListLabel: TLabel
+    Left = 8
+    Height = 16
+    Top = 78
+    Width = 9
+    Caption = '[]'
+    ParentColor = False
+  end
+  object CreationLabel: TLabel
+    Left = 8
+    Height = 16
+    Top = 104
+    Width = 17
+    Caption = '<>'
+    ParentColor = False
+  end
+  object DestructionLabel: TLabel
+    Left = 8
+    Height = 16
+    Top = 128
+    Width = 17
+    Caption = '<>'
+    ParentColor = False
+  end
+  object Button: TButton
+    Left = 216
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = '?'
+    OnClick = ButtonClick
+    TabOrder = 0
+  end
+  object DbListBox: TListBox
+    Left = 8
+    Height = 64
+    Top = 8
+    Width = 100
+    Items.Strings = (
+      'NexusDB'
+      'MySQL'
+    )
+    ItemHeight = 15
+    OnClick = DbListBoxClick
+    TabOrder = 1
+  end
+  object VerManListBox: TListBox
+    Left = 112
+    Height = 64
+    Top = 8
+    Width = 100
+    Items.Strings = (
+      'Git'
+      'Subversion'
+    )
+    ItemHeight = 15
+    OnClick = VerManListBoxClick
+    TabOrder = 2
+  end
+  object CreateButton: TButton
+    Left = 328
+    Height = 25
+    Top = 8
+    Width = 99
+    Caption = 'Create'
+    OnClick = CreateButtonClick
+    TabOrder = 3
+  end
+  object FreeButton: TButton
+    Left = 432
+    Height = 25
+    Top = 8
+    Width = 99
+    Caption = 'Free'
+    OnClick = FreeButtonClick
+    TabOrder = 4
+  end
+end

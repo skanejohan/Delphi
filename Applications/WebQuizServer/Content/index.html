@@ -1,0 +1,95 @@
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+	<head>
+		<script src="jquery-1.4.4.min.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+
+            function createUrl(params) {
+                return "http://localhost:9000" + params + "&id=" + Math.random();
+            }
+
+			function displayQuestion(data) {
+			    var obj = jQuery.parseJSON(data);
+				if (obj.done == "no") {
+					$("#divQuestionTextID").text(obj.question);
+					$("#1").text(obj.alt1);
+					$("#2").text(obj.alt2);
+					$("#3").text(obj.alt3);
+					$("#4").text(obj.alt4);
+					if (obj.number == 1) {
+						$("#sessionID").text(obj.sessionid);
+						$("#divQuestionID").show();
+					} 
+					else {
+						$("#divQuestionID").hide();
+						$("#resultID").text(obj.result);
+						$("#resultID").fadeIn("fast").delay(1000).fadeOut("fast");
+						$("#divQuestionID").delay(1500).fadeIn("fast");
+					}
+				}
+				else
+				{
+					$("#divQuestionID").hide();
+					$("#resultID").text(obj.result + " You scored " + obj.score);
+					$("#resultID").fadeIn("fast").delay(3000).fadeOut("fast");
+					$("#divSelectQuizID").delay(4000).fadeIn("fast");
+				}
+			}
+
+			function RunQuizButtonClick() {
+				$("#divSelectQuizID").hide();
+			    var quizID = $("#selQuiz option:selected").attr('value');
+                $.get(createUrl("?quizname=" + quizID), displayQuestion);
+			}
+
+			function AnswerButtonClick() {
+				$("#divQuestionID").hide();
+				var answerID = $(this).attr("id");
+				var sessionID = $("#sessionID").text();
+				$.get(createUrl("?answer=" + answerID + "&sessionid=" + sessionID), 
+					displayQuestion);
+			}
+
+			$(document).ready(
+				function() {
+					$("#divQuestionID").hide();
+					$("#resultID").hide();
+					$("#sessionID").hide();
+
+					$("#RunQuizButton").click(RunQuizButtonClick);
+					$("#divQuestionID > a").click(AnswerButtonClick);
+				}
+			);
+
+		</script>
+	</head>
+
+	<body>
+
+		<div id="divSelectQuizID">
+            <select id="selQuiz" name="Select a quiz">
+                _OPTIONS_
+            </select>
+			<a id="RunQuizButton" href="#">Run quiz</a>
+		</div>
+
+		<div id="divQuestionID">
+			<div id="divQuestionTextID">
+			</div>
+			<a id="1" href="#">1111</a>
+			<a id="2" href="#">2222</a>
+			<a id="3" href="#">3333</a>
+			<a id="4" href="#">4444</a>
+		</div>
+
+		<div id="resultID">
+		</div>
+
+		<div id="sessionID">
+		</div>
+
+	</body>
+
+</html>

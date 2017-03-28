@@ -1,0 +1,19 @@
+object SingletonTestForm2: TSingletonTestForm2
+  Left = 476
+  Height = 300
+  Top = 212
+  Width = 400
+  Caption = 'SingletonTestForm2'
+  ClientHeight = 300
+  ClientWidth = 400
+  LCLVersion = '0.9.28.2'
+  object Button1: TButton
+    Left = 160
+    Height = 25
+    Top = 136
+    Width = 75
+    Caption = '?'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+end

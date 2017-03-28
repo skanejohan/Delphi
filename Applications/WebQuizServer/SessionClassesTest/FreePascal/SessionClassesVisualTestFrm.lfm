@@ -1,0 +1,78 @@
+object SessionClassesVisualTestForm: TSessionClassesVisualTestForm
+  Left = 70
+  Height = 513
+  Top = 118
+  Width = 1239
+  Caption = 'SessionClassesVisualTestForm'
+  ClientHeight = 513
+  ClientWidth = 1239
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '0.9.28.2'
+  object Button1: TButton
+    Left = 991
+    Height = 25
+    Top = 478
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'New'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 1073
+    Height = 25
+    Top = 478
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Get'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Button3: TButton
+    Left = 1156
+    Height = 25
+    Top = 478
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Remove'
+    OnClick = Button3Click
+    TabOrder = 2
+  end
+  object HashTableMemo: TMemo
+    Left = 10
+    Height = 432
+    Top = 10
+    Width = 1221
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Font.Height = -11
+    Font.Name = 'Courier New'
+    ParentFont = False
+    TabOrder = 3
+  end
+  object IDEdit: TEdit
+    Left = 906
+    Height = 23
+    Top = 478
+    Width = 80
+    Anchors = [akRight, akBottom]
+    TabOrder = 4
+  end
+  object SessionTimeListEdit: TEdit
+    Left = 10
+    Height = 23
+    Top = 448
+    Width = 1216
+    ReadOnly = True
+    TabOrder = 5
+  end
+  object StatisticsButton: TButton
+    Left = 9
+    Height = 25
+    Top = 478
+    Width = 75
+    Caption = 'Statistics'
+    OnClick = StatisticsButtonClick
+    TabOrder = 6
+  end
+end
